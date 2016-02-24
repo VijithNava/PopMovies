@@ -5,12 +5,12 @@ import java.util.List;
 /**
  * Created by Vijith on 7/21/2015.
  */
-public class Response {
+public class MovieResponse {
 
     int page;
     List<ResultObject> results;
-    int totalPages;
     int totalResults;
+    int totalPages;
 
     public int getPage() {
         return page;

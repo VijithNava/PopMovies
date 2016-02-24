@@ -5,12 +5,12 @@ import java.util.List;
 /**
  * Created by Vijith on 7/21/2015.
  */
-public class ResultObject {
+public class MovieFullDetail {
 
     String adult;
     String backdrop_path;
     List<Integer> genre_ids;
-    Integer id;
+    String id;
     String original_language;
     String original_title;
     String overview;
@@ -60,5 +60,13 @@ public class ResultObject {
 
     public void setPoster_path(String poster_path) {
         this.poster_path = poster_path;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

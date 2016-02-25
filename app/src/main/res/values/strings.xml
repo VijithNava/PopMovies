@@ -4,4 +4,9 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_movie_detail">MovieDetail</string>
+
+    <string name="trailers_heading">Trailers:</string>
+    <string name="reviews_heading">Reviews:</string>
+
+    <string name="action_share">Share</string>
 </resources>

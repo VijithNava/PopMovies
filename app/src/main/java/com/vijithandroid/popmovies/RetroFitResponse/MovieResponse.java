@@ -1,4 +1,4 @@
-package com.vijithandroid.popmovies;
+package com.vijithandroid.popmovies.RetroFitResponse;
 
 import java.util.List;
 
@@ -8,7 +8,7 @@ import java.util.List;
 public class MovieResponse {
 
     int page;
-    List<ResultObject> results;
+    List<MovieFullDetail> results;
     int totalResults;
     int totalPages;
 
@@ -20,11 +20,11 @@ public class MovieResponse {
         this.page = page;
     }
 
-    public List<ResultObject> getResults() {
+    public List<MovieFullDetail> getResults() {
         return results;
     }
 
-    public void setResults(List<ResultObject> results) {
+    public void setResults(List<MovieFullDetail> results) {
         this.results = results;
     }
 

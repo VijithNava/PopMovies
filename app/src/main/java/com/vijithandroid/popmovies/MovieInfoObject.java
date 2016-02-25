@@ -12,13 +12,15 @@ public class MovieInfoObject implements Parcelable {
     private String synopsis;
     private String rating;
     private String releaseDate;
+    private String movieId;
 
-    public MovieInfoObject(String title, String imgURL, String overview, String rating, String relDate) {
+    public MovieInfoObject(String title, String imgURL, String overview, String rating, String relDate, String movieId) {
         this.title = title;
         this.imageURL = imgURL;
         this.synopsis = overview;
         this.rating = rating;
         this.releaseDate = relDate;
+        this.movieId = movieId;
     }
 
     private MovieInfoObject(Parcel in) {
@@ -27,6 +29,7 @@ public class MovieInfoObject implements Parcelable {
         this.synopsis = in.readString();
         this.rating = in.readString();
         this.releaseDate = in.readString();
+        this.movieId = in.readString();
     }
 
     @Override
@@ -40,6 +43,7 @@ public class MovieInfoObject implements Parcelable {
         out.writeString(synopsis);
         out.writeString(rating);
         out.writeString(releaseDate);
+        out.writeString(movieId);
     }
 
     public static final Creator<MovieInfoObject> CREATOR = new Creator<MovieInfoObject>() {
@@ -53,7 +57,7 @@ public class MovieInfoObject implements Parcelable {
     };
 
     public String[] returnInfo() {
-        return new String[]{title, imageURL, synopsis, rating, releaseDate};
+        return new String[]{title, imageURL, synopsis, rating, releaseDate, movieId};
     }
 
     public String getTitle() {

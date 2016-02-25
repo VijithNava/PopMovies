@@ -17,4 +17,8 @@ public class WebService{
                 .build();
         service = restAdapter.create(GitHubService.class);
     }
+
+    public GitHubService getService(){
+        return service;
+    }
 }

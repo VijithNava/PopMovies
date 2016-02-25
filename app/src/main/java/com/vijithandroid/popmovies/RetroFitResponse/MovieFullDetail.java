@@ -1,4 +1,4 @@
-package com.vijithandroid.popmovies;
+package com.vijithandroid.popmovies.RetroFitResponse;
 
 import java.util.List;
 

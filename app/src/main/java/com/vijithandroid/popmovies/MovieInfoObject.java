@@ -59,6 +59,7 @@ public class MovieInfoObject implements Parcelable {
     public String[] returnInfo() {
         return new String[]{title, imageURL, synopsis, rating, releaseDate, movieId};
     }
+    public String getMovieId() { return movieId;}
 
     public String getTitle() {
         return title;

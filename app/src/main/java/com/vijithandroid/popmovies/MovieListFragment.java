@@ -2,7 +2,6 @@ package com.vijithandroid.popmovies;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.content.res.Configuration;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -27,6 +26,7 @@ public class MovieListFragment extends Fragment {
 
     private ImageAdapter mImageAdapter;
     private ArrayList<MovieInfoObject> list;
+    boolean fromOrientation = false;
 
     String mSortType;
 
@@ -87,12 +87,13 @@ public class MovieListFragment extends Fragment {
         mImageAdapter = new ImageAdapter(getActivity(), list);
 
         GridView gridView = (GridView) rootView.findViewById(R.id.gridview);
-        if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT){
+        /*if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT){
             gridView.setNumColumns(3);
         }
         else if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE){
             gridView.setNumColumns(5);
         }
+        */
 
         gridView.setAdapter(mImageAdapter);
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
